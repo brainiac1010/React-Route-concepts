@@ -1,0 +1,28 @@
+.container {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #bde05b;
+}
+
+.Users {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #cfbdbd;
+}
