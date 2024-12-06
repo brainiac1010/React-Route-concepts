@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link ,NavLink} from "react-router-dom";
 import './header.css';
 
 const Header = () => {
@@ -28,21 +28,21 @@ const Header = () => {
                     padding: '0' 
                 }}>
                     <li>
-                        <Link to="/" style={linkStyle}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/posts" style={linkStyle}>Posts</Link>
-                    </li>
-                    <li>
-                        <Link to="/user" style={linkStyle}>Users</Link>
-                    </li>
-                    <li>
-                        <Link to="/about" style={linkStyle}>About</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact" style={linkStyle}>Contact</Link>
-                    </li>
-                    
+    <NavLink to="/">Home</NavLink>
+</li>
+<li>
+    <NavLink to="/posts">Posts</NavLink>
+</li>
+<li>
+    <NavLink to="/user">Users</NavLink>
+</li>
+<li>
+    <NavLink to="/about">About</NavLink>
+</li>
+<li>
+    <NavLink to="/contact">Contact</NavLink>
+</li>
+
                     
                 </ul>
             </nav>

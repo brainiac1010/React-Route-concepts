@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 
 const Home = () => {
     const [showGitHub, setShowGitHub] = useState(false);
 
     const handleExploreClick = () => {
-        setShowGitHub(true);
+        setShowGitHub(prevState => !prevState);
     };
+
+    const navigation =useNavigation()
 
     return (
         <div style={{
@@ -43,7 +45,7 @@ const Home = () => {
                         fontSize: '36px',
                         fontWeight: 'bold'
                     }}>
-                        Welcome to Arman's Developer Journey
+                        Welcome to MY Developer Journey
                     </h1>
                     <p style={{
                         color: '#ecf0f1',
@@ -144,7 +146,10 @@ const Home = () => {
                 </section>
 
                 {/* this part will change */}
-                <Outlet></Outlet>
+                {
+    navigation.state==='Loading'? <p> Loading...</p>:
+<Outlet></Outlet>
+}
             </main>
 
             <footer style={{
