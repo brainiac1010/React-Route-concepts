@@ -1,7 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const PostDetails = () => {
     const postDetails = useLoaderData();
+
+    const {postId} = useParams();
+
+   
     const { userId, title,  body } = postDetails;
 
     const containerStyle = {
@@ -28,6 +32,11 @@ const PostDetails = () => {
         color: "#555",
     };
 
+    const navigate = useNavigate()
+    const hendelBackButton = ()=>{
+        navigate(-1);
+    }
+
     return (
         <div style={containerStyle}>
             <h3 style={titleStyle}>Post Details for User ID: {userId}</h3>
@@ -35,6 +44,7 @@ const PostDetails = () => {
                 <strong>Title:</strong> {title}
             </p>
             <p style={smallTextStyle}>{body}</p>
+            <button onClick={hendelBackButton}>Go back</button>
         </div>
     );
 };

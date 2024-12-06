@@ -34,8 +34,10 @@ const User = ({ user }) => {
             <p style={paragraphStyle}>
                 <strong>Phone:</strong> {phone || "N/A"}
             </p>
-            <Link to={`/user/${id}`}>Show details</Link>
-            <Link to ={`/user/${id}`}><button> Click </button> </Link>
+        <div >
+            <Link to ={`/user/${id}`}><button> Show details </button> </Link>
+        </div>
+            
         </div>
     );
 };

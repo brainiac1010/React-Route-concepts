@@ -10,7 +10,7 @@ const Users = () => {
 
     const users = useLoaderData();
     console.log(users);
-    const users1 = ["Alice", "Bob", "Charlie", "Diana"]; 
+   
 
     return (
         <div className="container">
@@ -24,11 +24,7 @@ const Users = () => {
             </div>
 
           
-            <ul>
-                {users1.map((user, index) => (
-                    <li key={index}>{user}</li>
-                ))}
-            </ul>
+           
         </div>
     );
 };
